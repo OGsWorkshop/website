@@ -1,4 +1,4 @@
-# mercurywork.shop... TWO!!!
+# ogswork.shop... TWO!!!
 
 ## TODO
 
