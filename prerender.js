@@ -11,13 +11,13 @@ const entry = await import(pathToFileURL(resolve("dist/server/main-server.js")).
 
 entry.default("/");
 const paths = entry.router.ssgables();
-paths.push(["/devs/404", "/devs/404.html"])
+paths.push(["/404", "/404.html"])
 
 let template = await readFile(resolve("dist/static/index.html"), "utf8");
 
 for (const [route, path] of paths) {
 	const cleanRoute = route === "//" ? "/" : route;
-	const cleanPath = path === "//.html" || path === "/devs/.html" ? "/devs/index.html" : path.replace(/^\/\//, "/devs/");
+	const cleanPath = path === "//.html" || path === "/.html" ? "/index.html" : path.replace(/^\/\//, "/");
 	const rendered = await renderSsr(template, () => entry.default(cleanRoute));
 	console.log(
 		`prerendered: ${cleanRoute}\t${(new TextEncoder().encode(rendered).byteLength / 1024).toFixed(2)}kb`

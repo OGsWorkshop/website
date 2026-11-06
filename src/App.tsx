@@ -31,7 +31,7 @@ const App: Component<{}, {}> = function (cx) {
 			</Router>
 			<div style="width: 0; height: 0; overflow: hidden;">
 				<video id="clocks" disablepictureinpicture disableremoteplayback>
-					<source src="/devs/assets/clocks.mp4" type="video/mp4" preload="auto" />
+					<source src="/assets/clocks.mp4" type="video/mp4" preload="auto" />
 				</video>
 			</div>
 		</div>

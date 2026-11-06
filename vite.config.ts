@@ -3,7 +3,7 @@ import { devSsr } from "dreamland/vite";
 import { literalsHtmlCssMinifier } from "@literals/rollup-plugin-html-css-minifier";
 
 export default defineConfig({
-	base: "/devs/",
+	base: "/",
 	plugins: [
 		literalsHtmlCssMinifier({
 			include: ["src/**/*.tsx"],
